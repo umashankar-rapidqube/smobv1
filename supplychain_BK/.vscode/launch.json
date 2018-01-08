@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/smob/app.js"
+            "program": "/opt/gopath/src/smbk/supplychain_BK/app.js"
         }
     ]
 }

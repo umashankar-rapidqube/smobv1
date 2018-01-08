@@ -499,16 +499,16 @@ module.exports = router => {
                             if (result.query[i].Record.transactionlist[j].transactiondetails.status == "RequestInitiated" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "RequestAccepted" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationRaised" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationAccepted" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationAccepted" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "purchaseorderRaised" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "deliveryorderRaised" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "shipped" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "DoDelievered" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "Shipped" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "DeliveryOrderDelievered" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceRaised" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceApproved" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentInitiated" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceDecline" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentPaid" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentReceived" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "RequestRejected" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationRejected" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "Completed") {
@@ -524,7 +524,7 @@ module.exports = router => {
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationRaised") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                     console.log(statusList)
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationAccepted") {
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationAccepted") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationRejected") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
@@ -535,10 +535,10 @@ module.exports = router => {
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "deliveryorderRaised") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                     console.log(statusList)
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "shipped") {
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "Shipped") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                     console.log(statusList)
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "DoDelievered") {
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "DeliveryOrderDelievered") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                     console.log(statusList)
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceRaised") {
@@ -553,7 +553,7 @@ module.exports = router => {
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentInitiated") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                     console.log(statusList)
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentPaid") {
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentReceived") {
                                     statusList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                     console.log(statusList)
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "Completed") {
@@ -609,16 +609,16 @@ module.exports = router => {
                             if (result.query[i].Record.transactionlist[j].transactiondetails.status == "RequestInitiated" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "RequestAccepted" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationRaised" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationAccepted" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationAccepted" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "purchaseorderRaised" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "deliveryorderRaised" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "shipped" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "DoDelievered" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "Shipped" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "DeliveryOrderDelievered" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceRaised" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceApproved" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentInitiated" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceDecline" ||
-                                result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentPaid" ||
+                                result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentReceived" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "RequestRejected" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationRejected" ||
                                 result.query[i].Record.transactionlist[j].transactiondetails.status == "Completed") {
@@ -629,15 +629,15 @@ module.exports = router => {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationRaised") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationAccepted") {
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "QuotationAccepted") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "purchaseorderRaised") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "deliveryorderRaised") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "shipped") {
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "Shipped") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "DoDelievered") {
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "DeliveryOrderDelievered") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceRaised") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
@@ -647,8 +647,8 @@ module.exports = router => {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "invoiceDecline") {
                                     OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
-                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentPaid") {
-                                    OpenList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
+                                } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "paymentReceived") {
+                                    ClosedList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "RequestRejected") {
                                     ClosedList.push(result.query[i].Record.transactionlist[j].transactiondetails.status);
                                 } else if (result.query[i].Record.transactionlist[j].transactiondetails.status == "quotationRejected") {
